@@ -1,15 +1,16 @@
-#include <stdio.h> //#include <> ÇØ´õÆÄÀÏÀÌ¸ç ¿ÜºÎÀÇ º¯¼ö ÇÔ¼ö ¼Ò½ºÄÚµå »ç¿ëÀ» À§ÇØ¼­ »ç¿ë, stdio.h: Ç¥ÁØÀÔÃâ·ÂÇÔ¼ö
-void main() //void : return°ª ¾ø´Â ÀÚ·áÇü ÇÔ¼ö main() : C¾ð¾î ½ÃÀÛ½Ã °¡Àå ¸ÕÀú È£ÃâµÇ´Â ÇÔ¼ö
+#include <stdio.h> //#include <> í•´ë”íŒŒì¼ì´ë©° ì™¸ë¶€ì˜ ë³€ìˆ˜ í•¨ìˆ˜ ì†ŒìŠ¤ì½”ë“œ ì‚¬ìš©ì„ ìœ„í•´ì„œ ì‚¬ìš©, stdio.h: í‘œì¤€ìž…ì¶œë ¥í•¨ìˆ˜
+void main() //void : returnê°’ ì—†ëŠ” ìžë£Œí˜• í•¨ìˆ˜ main() : Cì–¸ì–´ ì‹œìž‘ì‹œ ê°€ìž¥ ë¨¼ì € í˜¸ì¶œë˜ëŠ” í•¨ìˆ˜
 {
-	printf("char ÀÇ Å©±â´Â %d ¹ÙÀÌÆ® ÀÔ´Ï´Ù.\n", sizeof(char)); //char : 1¹ÙÀÌÆ® ¹®ÀÚÇü ÀÚ·áÇüÀÌ¸ç -128ºÎÅÍ 127±îÁöÀÇ Á¤¼ö¿¡ ÇØ´çµÇ´Â ¹®ÀÚ¸¦ ÀúÀå°¡´É
-	printf("unsigned char ÀÇ Å©±â´Â %d ¹ÙÀÌÆ® ÀÔ´Ï´Ù.\n", sizeof(unsigned char));//unsigned char : 1¹ÙÀÌÆ® ¹®ÀÚÇü ÀÚ·áÇüÀÌ¸ç 0ºÎÅÍ 255±îÁöÀÇ Á¤¼ö¿¡ ÇØ´çµÇ´Â ¹®ÀÚ¸¦ ÀúÀå°¡´É
-	printf("short ÀÇ Å©±â´Â %d ¹ÙÀÌÆ® ÀÔ´Ï´Ù.\n", sizeof(short)); //short : 2¹ÙÀÌÆ® Á¤¼öÇü ÀÚ·áÇüÀÌ¸ç -32768ºÎÅÍ 32767±îÁö Á¤¼ö¸¦ ÀúÀå°¡´É
-	printf("unsigned short ÀÇ Å©±â´Â %d ¹ÙÀÌÆ® ÀÔ´Ï´Ù.\n", sizeof(unsigned short));//unsigned short : 2¹ÙÀÌÆ® Á¤¼öÇü ÀÚ·áÇüÀÌ¸ç 0ºÎÅÍ 65535±îÁö Á¤¼ö¸¦ ÀúÀå°¡´É
-	printf("int ÀÇ Å©±â´Â %d ¹ÙÀÌÆ® ÀÔ´Ï´Ù.\n", sizeof(int));//int : 4¹ÙÀÌÆ® Á¤¼öÇü ÀÚ·áÇüÀÌ¸ç -214783648ºÎÅÍ 2147483647±îÁö Á¤¼ö¸¦ ÀúÀå°¡´É
-	printf("unsigned int ÀÇ Å©±â´Â %d ¹ÙÀÌÆ® ÀÔ´Ï´Ù.\n", sizeof(unsigned int));//unsigned int : 4¹ÙÀÌÆ® Á¤¼öÇü ÀÚ·áÇüÀÌ¸ç 0ºÎÅÍ 4294967295±îÁö Á¤¼ö¸¦ ÀúÀå°¡´É
-	printf("long ÀÇ Å©±â´Â %d ¹ÙÀÌÆ® ÀÔ´Ï´Ù.\n", sizeof(long));//long : 4¹ÙÀÌÆ® Á¤¼öÇü ÀÚ·áÇüÀÌ¸ç -214783648ºÎÅÍ 2147483647±îÁö Á¤¼ö¸¦ ÀúÀå°¡´É
-	printf("unsigned long ÀÇ Å©±â´Â %d ¹ÙÀÌÆ® ÀÔ´Ï´Ù.\n", sizeof(unsigned long));//unsigned long : 4¹ÙÀÌÆ® Á¤¼öÇü ÀÚ·áÇüÀÌ¸ç 0ºÎÅÍ 4294967295±îÁö Á¤¼ö¸¦ ÀúÀå°¡´É
-	printf("floatÀÇ Å©±â´Â %d ¹ÙÀÌÆ® ÀÔ´Ï´Ù.\n", sizeof(float));//float : 4¹ÙÀÌÆ® ½Ç¼öÇü ÀÚ·áÇüÀÌ¸ç ¡¾3.4*10^-38ºÎÅÍ ¡¾3.4*10^38±îÁö ½Ç¼ö¸¦ ÀúÀå°¡´É Ç¥Çö½Ã ¿ÀÂ÷¹ß»ý°¡´É
-	printf("doubleÀÇ Å©±â´Â %d ¹ÙÀÌÆ® ÀÔ´Ï´Ù.\n", sizeof(double));// : 4¹ÙÀÌÆ® ½Ç¼öÇü ÀÚ·áÇüÀÌ¸ç ¡¾1.7*10^-306ºÎÅÍ ¡¾1.7*10^306±îÁö ½Ç¼ö¸¦ ÀúÀå°¡´É Ç¥Çö½Ã ¿ÀÂ÷¹ß»ý°¡´É
+	printf("char ì˜ í¬ê¸°ëŠ” %d ë°”ì´íŠ¸ ìž…ë‹ˆë‹¤.\n", sizeof(char)); //char : 1ë°”ì´íŠ¸ ë¬¸ìží˜• ìžë£Œí˜•ì´ë©° -128ë¶€í„° 127ê¹Œì§€ì˜ ì •ìˆ˜ì— í•´ë‹¹ë˜ëŠ” ë¬¸ìžë¥¼ ì €ìž¥ê°€ëŠ¥
+	printf("unsigned char ì˜ í¬ê¸°ëŠ” %d ë°”ì´íŠ¸ ìž…ë‹ˆë‹¤.\n", sizeof(unsigned char));//unsigned char : 1ë°”ì´íŠ¸ ë¬¸ìží˜• ìžë£Œí˜•ì´ë©° 0ë¶€í„° 255ê¹Œì§€ì˜ ì •ìˆ˜ì— í•´ë‹¹ë˜ëŠ” ë¬¸ìžë¥¼ ì €ìž¥ê°€ëŠ¥
+	printf("short ì˜ í¬ê¸°ëŠ” %d ë°”ì´íŠ¸ ìž…ë‹ˆë‹¤.\n", sizeof(short)); //short : 2ë°”ì´íŠ¸ ì •ìˆ˜í˜• ìžë£Œí˜•ì´ë©° -32768ë¶€í„° 32767ê¹Œì§€ ì •ìˆ˜ë¥¼ ì €ìž¥ê°€ëŠ¥
+	printf("unsigned short ì˜ í¬ê¸°ëŠ” %d ë°”ì´íŠ¸ ìž…ë‹ˆë‹¤.\n", sizeof(unsigned short));//unsigned short : 2ë°”ì´íŠ¸ ì •ìˆ˜í˜• ìžë£Œí˜•ì´ë©° 0ë¶€í„° 65535ê¹Œì§€ ì •ìˆ˜ë¥¼ ì €ìž¥ê°€ëŠ¥
+	printf("int ì˜ í¬ê¸°ëŠ” %d ë°”ì´íŠ¸ ìž…ë‹ˆë‹¤.\n", sizeof(int));//int : 4ë°”ì´íŠ¸ ì •ìˆ˜í˜• ìžë£Œí˜•ì´ë©° -214783648ë¶€í„° 2147483647ê¹Œì§€ ì •ìˆ˜ë¥¼ ì €ìž¥ê°€ëŠ¥
+	printf("unsigned int ì˜ í¬ê¸°ëŠ” %d ë°”ì´íŠ¸ ìž…ë‹ˆë‹¤.\n", sizeof(unsigned int));//unsigned int : 4ë°”ì´íŠ¸ ì •ìˆ˜í˜• ìžë£Œí˜•ì´ë©° 0ë¶€í„° 4294967295ê¹Œì§€ ì •ìˆ˜ë¥¼ ì €ìž¥ê°€ëŠ¥
+	printf("long ì˜ í¬ê¸°ëŠ” %d ë°”ì´íŠ¸ ìž…ë‹ˆë‹¤.\n", sizeof(long));//long : 4ë°”ì´íŠ¸ ì •ìˆ˜í˜• ìžë£Œí˜•ì´ë©° -214783648ë¶€í„° 2147483647ê¹Œì§€ ì •ìˆ˜ë¥¼ ì €ìž¥ê°€ëŠ¥
+	printf("unsigned long ì˜ í¬ê¸°ëŠ” %d ë°”ì´íŠ¸ ìž…ë‹ˆë‹¤.\n", sizeof(unsigned long));//unsigned long : 4ë°”ì´íŠ¸ ì •ìˆ˜í˜• ìžë£Œí˜•ì´ë©° 0ë¶€í„° 4294967295ê¹Œì§€ ì •ìˆ˜ë¥¼ ì €ìž¥ê°€ëŠ¥
+	printf("floatì˜ í¬ê¸°ëŠ” %d ë°”ì´íŠ¸ ìž…ë‹ˆë‹¤.\n", sizeof(float));//float : 4ë°”ì´íŠ¸ ì‹¤ìˆ˜í˜• ìžë£Œí˜•ì´ë©° Â±3.4*10^-38ë¶€í„° Â±3.4*10^38ê¹Œì§€ ì‹¤ìˆ˜ë¥¼ ì €ìž¥ê°€ëŠ¥ í‘œí˜„ì‹œ ì˜¤ì°¨ë°œìƒê°€ëŠ¥
+	printf("doubleì˜ í¬ê¸°ëŠ” %d ë°”ì´íŠ¸ ìž…ë‹ˆë‹¤.\n", sizeof(double));// : 4ë°”ì´íŠ¸ ì‹¤ìˆ˜í˜• ìžë£Œí˜•ì´ë©° Â±1.7*10^-306ë¶€í„° Â±1.7*10^306ê¹Œì§€ ì‹¤ìˆ˜ë¥¼ ì €ìž¥ê°€ëŠ¥ í‘œí˜„ì‹œ ì˜¤ì°¨ë°œìƒê°€ëŠ¥
 }
-//printf() : ÇÁ·Î±×·¥¿¡¼­ ¸ð´ÏÅÍ¸¦ ÅëÇÏ¿© ±ÛÀÚ¸¦ Ãâ·ÂÇÏ´Â ±â´ÉÀ» Á¦°øÇÔ, sizeof() : »ç¿ëÁßÀÎ º¯¼ö°¡ ¸î ¹ÙÀÌÆ®ÀÎÁö Ãâ·ÂÇØÁÖ´Â ÇÔ¼ö
+//printf() : í”„ë¡œê·¸ëž¨ì—ì„œ ëª¨ë‹ˆí„°ë¥¼ í†µí•˜ì—¬ ê¸€ìžë¥¼ ì¶œë ¥í•˜ëŠ” ê¸°ëŠ¥ì„ ì œê³µí•¨, sizeof() : ì‚¬ìš©ì¤‘ì¸ ë³€ìˆ˜ê°€ ëª‡ ë°”ì´íŠ¸ì¸ì§€ ì¶œë ¥í•´ì£¼ëŠ” í•¨ìˆ˜
+//%d : ì •ìˆ˜í˜• í˜•ì‹ì§€ì •ë¬¸ìžì´ë©° ë¶€í˜¸ ìžˆëŠ” 10ì§„ìˆ˜ í˜•íƒœì˜ ìˆ«ìžë¥¼ ì¶œë ¥í•  ë•Œ ì‚¬ìš©í•œë‹¤
